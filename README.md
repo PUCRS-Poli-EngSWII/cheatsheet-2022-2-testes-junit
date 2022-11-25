@@ -12,6 +12,7 @@ Os **testes unitários**, ou testes de unidade visam garantir a qualidade do có
 <li>Garantir um software de qualidade</li>
 <li>Garantir que os módulos, as funções estão com seu comportamento correto</li>
 <li>Aumentar a velocidade do código</li>
+<br></br>
 
 Os **testes de integração** têm o objetivo de encontrar falhas de integração entre as unidades de compõe o software, e não em testar as funcionalidades individuais. Dessa maneira, esses testes visam validar se os componentes de um sistema interagem da forma esperada e correta. Esses testes são indispensáveis para que seja possível garantir uma boa performance do sistema, já que com esses é possível encontrar falhas, erros e bugs durante o desenvolvimento de um software.
 Eles são responsáveis por aumentar a segurança e a eficiência de uma aplicação antes de concluir o projeto. A médio e longo prazo, isso economiza tempo e dinheiro, por isso é imprescindível.
