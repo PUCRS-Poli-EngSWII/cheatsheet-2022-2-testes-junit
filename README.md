@@ -77,6 +77,69 @@ void init(TestInfo testInfo) {
 ``` 
 
 ### Asserções
+Asserções em JUnit ajudam a validar os resultados esperados com o atual resultado de uma função de teste. Para isso, diversas funções de asserções estão disponíveis na classe [org.junit.jupiter.Assertions](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html).
+
+### **assertEquals()** e **assertNotEquals()**
+Verifica se o valor esperado é igual ao valor real da função (assertEquals). De forma contrária, assertNotEquals verifica se o valor esperado não é igual ao valor real da função.
+```
+@Test
+void Test(){
+    //Test will pass
+    assertEquals(4, Calculator.add(2, 2));
+     
+    //Test will fail 
+    assertEquals(3, Calculator.add(2, 2), "Calculator.add(2, 2) test failed");
+     
+    //Test will pass
+	assertNotEquals(3, Calculator.add(2, 2));
+
+	//Test will fail
+	assertNotEquals(4, Calculator.add(2, 2), "Calculator.add(2, 2) test failed");
+}
+```
+
+### **assertArrayEquals()**
+Verifica se o array esperado é igual ao array real retornado da função.
+
+```
+@Test
+void testCase()
+{
+	//Test will pass
+	Assertions.assertArrayEquals(new int[]{1,2,3}, new int[]{1,2,3}, "Array Equal Test");
+
+	//Test will fail because element order is different
+	Assertions.assertArrayEquals(new int[]{1,2,3}, new int[]{1,3,2}, "Array Equal Test");
+
+	//Test will fail because number of elements are different
+	Assertions.assertArrayEquals(new int[]{1,2,3}, new int[]{1,2,3,4}, "Array Equal Test");
+}
+```
+
+### **assertNull()** e **assertNotNull()**
+Verifica se o valor atual é nulo/não é nulo.
+
+```
+@Test
+void testCase()
+{
+	String nullString = null;
+	String notNullString = "howtodoinjava.com";
+
+	//Test will pass
+	Assertions.assertNotNull(notNullString);
+
+	//Test will fail
+	Assertions.assertNotNull(nullString);
+
+	//Test will pass
+	Assertions.assertNull(nullString);
+
+	// Test will fail
+	Assertions.assertNull(notNullString);
+}
+```
+
 ### Exemplos
 -----------------------------------
 
@@ -103,3 +166,11 @@ DEVMEDIA. JUnit Tutorial. Disponível em: <https://www.devmedia.com.br/junit-tut
 <lb>
 
 GHAHRAI, Amir. JUnit 5 Annotations with examples. 2019. Disponível em: <https://devqa.io/junit-5-annotations/>. Acesso em 26 de Novembro de 2022.
+
+<lb>
+
+HOWTODOINJAVA. JUnit 5 Assertions with Examples. 2022. Disponível em: <https://howtodoinjava.com/junit5/junit-5-assertions-examples/>. Acesso em 26 de Novembro de 2022.
+
+<lb>
+
+JUNIT. Class Assertions. 2019. Disponível em: <https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html>. Acesso em 26 de Novembro de 2022.
