@@ -20,19 +20,38 @@ O cenário ideal é primeiro fazer os testes unitários a cada nova funcionalida
 
 ## A Ferramenta Básica: JUnit
 ### O que é
+
+JUnit é um framework open-source que visa facilitar o desenvolvimento, escrita e execução de testes unitários em Java. Essa framework fornece uma API completa para ser possível construir testes e executá-los em modo console.
+
+### Motivos para usar JUnit:
+<li>Facilita a criação e execução de testes </li>
+<li>É orientada a objeto</li>
+<li>É gratuito</li>
+<li>Pode verificar se cada unidade de código funciona da maneira que se espera</li>
+
 ### Cookbook
 #### Pacotes (imports)
 #### Anotações
 #### Asserções
 #### Execmplos
 -----------------------------------
-https://dayvsonlima.medium.com/entenda-de-uma-vez-por-todas-o-que-são-testes-unitários-para-que-servem-e-como-fazê-los-2a6f645bab3
 
-https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478
+### Referências
 
-https://www.devmedia.com.br/teste-de-integracao-na-pratica/31877
+LIMA, Davyson. Entenda por uma vez por todas o que são testes unitários, para que servem e como fazê-los. 2017. Disponível em: <https://dayvsonlima.medium.com/entenda-de-uma-vez-por-todas-o-que-são-testes-unitários-para-que-servem-e-como-fazê-los-2a6f645bab3>. Acesso em 25 de Novembro de 2022.
 
-https://kenzie.com.br/blog/teste-de-integracao/
+<lb>
 
+DEVMEDIA. Como você testa seus códigos? Disponível em: <https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478>. Acesso em 25 de Novembro de 2022.
 
+<lb>
 
+DEVMEDIA. Testes de integração na prática. 2014. Disponível em: <https://www.devmedia.com.br/teste-de-integracao-na-pratica/31877>. Acesso em 25 de Novembro de 2022.
+
+<lb>
+
+KRIGER, Daniel. O que é teste de integração e quais são os tipos de teste? 2021. Disponível em: <https://kenzie.com.br/blog/teste-de-integracao/>. Acesso em 25 de Novembro de 2022.
+
+<lb>
+
+DEVMEDIA. JUnit Tutorial. Disponível em: <https://www.devmedia.com.br/junit-tutorial/1432>. Acesso em 25 de Novembro de 2022.
