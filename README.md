@@ -31,10 +31,53 @@ JUnit é um framework open-source que visa facilitar o desenvolvimento, escrita 
 <li>Pode verificar se cada unidade de código funciona da maneira que se espera</li>
 
 ### Cookbook
-#### Pacotes (imports)
-#### Anotações
-#### Asserções
-#### Execmplos
+### Pacotes (imports)
+### Anotações
+
+#### **@Test**
+Essa anotação indica que o método é um método de teste.
+Exemplo:
+```
+@Test 
+void helloJUnit5() {
+    assertEquals(10, 5+5);
+}
+```
+
+#### **@ParameterizedTest**
+Testes parametrizados fazem com que seja possível rodar testes várias vezes com parâmetros diferentes. Ao usar essa anotação nos métodos de teste, é necessário declarar a fonte dos parâmetros para cada chamada do teste. Isso pode ser feito com a anotação **@ValueSource** e especificar um array, por exemplo.
+````
+@ParameterizedTest
+@ValueSource(strings = {"cali", "bali", "dani"})
+void endsWithI(String str) {
+    assertTrue(str.endsWith("i"));
+}
+```` 
+#### **@RepeatedTest**
+Com essa anotação é possível repetir um test específico um certo número de vezes, especificando esse número na anotação
+````
+@RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+@DisplayName("RepeatingTest")
+void customDisplayName(RepetitionInfo repInfo, TestInfo testInfo) {
+    int i = 3;
+    System.out.println(testInfo.getDisplayName() + "-->" + repInfo.getCurrentRepetition());
+
+    assertEquals(repInfo.getCurrentRepetition(), i);
+}
+````
+
+#### **@BeforeEach**
+O método que tiver essa anotação será executado antes de cada método de teste.
+```
+@BeforeEach
+void init(TestInfo testInfo) {
+    String callingTest = testInfo.getTestMethod().get().getName();
+    System.out.println(callingTest);
+}
+``` 
+
+### Asserções
+### Exemplos
 -----------------------------------
 
 ### Referências
@@ -56,3 +99,7 @@ KRIGER, Daniel. O que é teste de integração e quais são os tipos de teste? 2
 <lb>
 
 DEVMEDIA. JUnit Tutorial. Disponível em: <https://www.devmedia.com.br/junit-tutorial/1432>. Acesso em 25 de Novembro de 2022.
+
+<lb>
+
+GHAHRAI, Amir. JUnit 5 Annotations with examples. 2019. Disponível em: <https://devqa.io/junit-5-annotations/>. Acesso em 26 de Novembro de 2022.
