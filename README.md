@@ -35,7 +35,7 @@ Para a criaçao de testes automatizados é simples e rápido, sendo executado au
 Primeiramente é preciso que tenha o codigo ou tenha como ele devera se comportar.
 Assim, criamos um novo arquivo que por convenção tenha o mesmo nome do arquivo a ser testado com .test no final.
 
-Para criar o teste, devemos comecar com a anotaçao '@teste' e criamos a classe.
+Para criar o teste, devemos comecar com a anotaçao '@test' e criamos a classe.
 Para o exemplo iremos testar uma função que deve retornar um 'boolean' de se o valor passado é impar.
 Devemos fazer essa validaçao usando o 'assertTrue()'. Assim, ele verifica o valor de boolena passado para ele.
 
@@ -55,8 +55,8 @@ class testOddNumberFunction {
 
 
 ### Pacotes (imports)
-Os pacotes são utilizados na adição de funcionalidades ja disponibilizadas pelo Junity por padrão. É possivel importar tais pacotes ultilizando a API padrão do Junity.
-Como podemos ver no codigo a seguir, um exmplo simples de uma calculadora ultilizando a biblioteca Jupter encontrada no site oficial do Junity:
+Os pacotes são utilizados na adição de funcionalidades já disponibilizadas pelo JUnit por padrão. É possivel importar tais pacotes ultilizando a API padrão do Junity.
+Como podemos ver no código a seguir, um exmplo simples de uma calculadora ultilizando a biblioteca Jupter encontrada no site oficial do JUnit:
 ```
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -72,7 +72,7 @@ class MyFirstJUnitJupiterTests {
     }
 }
 ```
-Os pacotes sao importado de como: import org.junity.[pacote desejado].
+Os pacotes sao importado de como: import org.junit.[pacote desejado].
 
 ### Anotações
 
