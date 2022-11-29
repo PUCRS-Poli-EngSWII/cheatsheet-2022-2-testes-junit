@@ -31,6 +31,27 @@ JUnit é um framework open-source que visa facilitar o desenvolvimento, escrita 
 <li>Pode verificar se cada unidade de código funciona da maneira que se espera</li>
 
 ### Cookbook
+Para a criaçao de testes automatizados é simples e rápido, sendo executado automaticamente.
+Primeiramente é preciso que tenha o codigo ou tenha como ele devera se comportar.
+Assim, criamos um novo arquivo que por convenção tenha o mesmo nome do arquivo a ser testado com .test no final.
+
+Para criar o teste, devemos comecar com a anotaçao '@teste' e criamos a classe.
+Para o exemplo iremos testar uma função que deve retornar um 'boolean' de se o valor passado é impar.
+Devemos fazer essa validaçao usando o 'assertTrue()'. Assim, ele verifica o valor de boolena passado para ele.
+
+Assim, ficamos com o codigo
+```
+import org.junit.Assert.*;
+
+class testOddNumberFunction {
+
+    private final Funtion func = new Function();
+    @Test
+    void oddNumber() {
+        assertTrue(func.oddNumber(7);
+    }
+}
+```
 
 
 ### Pacotes (imports)
