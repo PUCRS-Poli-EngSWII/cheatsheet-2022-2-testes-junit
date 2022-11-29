@@ -31,7 +31,28 @@ JUnit é um framework open-source que visa facilitar o desenvolvimento, escrita 
 <li>Pode verificar se cada unidade de código funciona da maneira que se espera</li>
 
 ### Cookbook
+
+
 ### Pacotes (imports)
+Os pacotes são utilizados na adição de funcionalidades ja disponibilizadas pelo Junity por padrão. É possivel importar tais pacotes ultilizando a API padrão do Junity.
+Como podemos ver no codigo a seguir, um exmplo simples de uma calculadora ultilizando a biblioteca Jupter encontrada no site oficial do Junity:
+```
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import example.util.Calculator;
+
+import org.junit.jupiter.api.Test;
+
+class MyFirstJUnitJupiterTests {
+    private final Calculator calculator = new Calculator();
+    @Test
+    void addition() {
+        assertEquals(2, calculator.add(1, 1));
+    }
+}
+```
+Os pacotes sao importado de como: import org.junity.[pacote desejado].
+
 ### Anotações
 
 #### **@Test**
